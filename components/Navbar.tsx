@@ -1,3 +1,4 @@
+"use client"
 import { NAV_LINKS } from "@/constants"
 import Image from "next/image"
 import Link from "next/link"
@@ -7,33 +8,20 @@ const Navbar = () => {
   return (
     <nav className="flexBetween max-container padding-container relative z-30 py-5">
       <Link href="/">
-        <Image src="/hilink-logo.svg" alt="logo" width={74} height={29} />
+        <Image src="/logo.svg" alt="logo" width={150} height={150} />
       </Link>
-
-      <ul className="hidden h-full gap-12 lg:flex">
-        {NAV_LINKS.map((link) => (
-          <Link href={link.href} key={link.key} className="regular-16 text-gray-50 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold">
-            {link.label}
-          </Link>
-        ))}
-      </ul>
-
-      <div className="lg:flexCenter hidden">
-        <Button 
+      <div className="lg:flexCenter">
+     <div onClick={()=>window.scrollTo(0, 5000)}>
+     <Button 
           type="button"
-          title="Login"
+          title="Contact us"
           icon="/user.svg"
           variant="btn_dark_green"
         />
+     </div>
       </div>
 
-      <Image 
-        src="menu.svg"
-        alt="menu"
-        width={32}
-        height={32}
-        className="inline-block cursor-pointer lg:hidden"
-      />
+
     </nav>
   )
 }

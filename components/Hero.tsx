@@ -1,5 +1,7 @@
+"use client"
 import Image from 'next/image'
 import Button from './Button'
+import Link from 'next/link'
 
 const Hero = () => {
   return (
@@ -12,11 +14,11 @@ const Hero = () => {
           alt="camp"
           width={50}
           height={50}
-          className="absolute left-[-5px] top-[-30px] w-10 lg:w-[50px]"
+          className="absolute left-[-5px] top-[-60px] w-10 lg:w-[50px]"
         />
-        <h1 className="bold-52 lg:bold-88">Putuk Truno Camp Area</h1>
+        <h1 className="bold-20 lg:bold-20">Discover the Magic of Kashmir: Your Ultimate Travel Adventure Awaits!</h1>
         <p className="regular-16 mt-6 text-gray-30 xl:max-w-[520px]">
-          We want to be on each of your journeys seeking the satisfaction of seeing the incorruptible beauty of nature. We can help you on an adventure around the world in just one app
+        Explore the breathtaking beauty of Kashmir with our curated tours. From serene lakes and lush valleys to majestic mountains, experience the magic of this paradise on Earth. Join us for unforgettable adventures and make memories that last a lifetime!
         </p>
 
         <div className="my-11 flex flex-wrap gap-5">
@@ -33,23 +35,30 @@ const Hero = () => {
           </div>
 
           <p className="bold-16 lg:bold-20 text-blue-70">
-            198k
+            100
             <span className="regular-16 lg:regular-20 ml-1">Excellent Reviews</span>
           </p>
         </div>
 
-        <div className="flex flex-col w-full gap-3 sm:flex-row">
-          <Button 
+        <div className="flex flex-col w-full gap-3 sm:flex-row" >
+        <Link href={"https://docs.google.com/forms/d/e/1FAIpQLSekzFmu9uZHoZoc_FLLZZL7xpGQVqYj8HkER5Hk4tDtQjzYOQ/viewform?usp=sf_link"}>    <Button 
+      
             type="button" 
-            title="Download App" 
+            title="Book Now" 
             variant="btn_green" 
-          />
-          <Button 
+          /> 
+        </Link>
+          
+  
+       <Link href={"tel:+91962-262-4894 "}>
+       <Button 
             type="button" 
-            title="How we work?" 
-            icon="/play.svg"
+            title="+91 9622624894" 
+            icon="/phone.svg"
             variant="btn_white_text" 
           />
+       </Link>
+         
         </div>
       </div>
 
@@ -59,19 +68,18 @@ const Hero = () => {
            <div className="flex flex-col">
             <div className="flexBetween">
               <p className="regular-16 text-gray-20">Location</p>
-              <Image src="/close.svg" alt="close" width={24} height={24} />
             </div>
-            <p className="bold-20 text-white">Aguas Calientes</p>
+            <p className="bold-20 text-white">Kashmir</p>
           </div>
 
           <div className="flexBetween">
             <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Distance</p>
-              <p className="bold-20 text-white">173.28 mi</p>
+              <p className="regular-16 block text-gray-20">Places</p>
+              <p className="bold-20 text-white">10+</p>
             </div>
             <div className="flex flex-col">
-              <p className="regular-16 block text-gray-20">Elevation</p>
-              <p className="bold-20 text-white">2.040 km</p>
+              <p className="regular-16 block text-gray-20">Activities</p>
+              <p className="bold-20 text-white">15+</p>
             </div>
           </div>
         </div>
