@@ -65,9 +65,7 @@ export const FOOTER_CONTACT_INFO = {
 export const SOCIALS = {
   title: 'Social',
   links: [
-    '/facebook.svg',
-    '/instagram.svg',
-    '/twitter.svg',
-    '/youtube.svg',
+   {img: '/facebook.svg',profileLInk:"https://www.instagram.com/bliss_shine_toursandtravels?igsh=cGRiaTVha2wybXI4"},
+   {img: '/instagram.svg',profileLInk:"https://www.facebook.com/profile.php?id=61566328522104&mibextid=ZbWKwL"},
   ],
 };

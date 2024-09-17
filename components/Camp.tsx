@@ -38,13 +38,13 @@ const CampSite = ({ backgroundImage, title, subtitle, peopleJoined }: CampProps)
 
 const Camp = () => {
   return (
-    <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20">
+    <section className="2xl:max-container relative flex flex-col py-10 lg:mb-10 lg:py-20 xl:mb-20 ">
       <div className="hide-scrollbar flex h-[340px] w-full items-start justify-start gap-8 overflow-x-auto lg:h-[400px] xl:h-[640px]">
         <CampSite 
           backgroundImage="bg-bg-img-1"
           title="Enjoy the nature"
           subtitle="with Bliss Shine tour & travels"
-          peopleJoined="50+ Joined"
+          peopleJoined=""
         />
       
       </div>
@@ -55,7 +55,7 @@ const Camp = () => {
             <strong>Ready to</strong> Experience the Magic of Kashmir?
           </h2>
           <p className="regular-14 xl:regular-16 mt-5 text-white">
-          Join us for the best tour experience in Kashmir! Our expert guides, customized itineraries, and top-notch services ensure an unforgettable journey. From serene houseboat stays to thrilling mountain treks, we promise a blend of adventure and relaxation in the breathtaking landscapes of Kashmir.
+          Bliss Shone Tour and Travels offers a complete Kashmir trip package. It includes transport, hotel stays, meals, and fun activities. Explore the beauty of Kashmir with no worries. We provide everything you need for a comfortable and enjoyable vacation. Perfect for both adventure and relaxation!
           </p>
        
         </div>
