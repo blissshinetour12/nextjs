@@ -53,7 +53,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
         <div className="border bg-gray-20" />
         <p className="regular-14 w-full text-center text-gray-30">2023 Bliss Shine Tour & travels | All rights reserved <span className='text-blue-700'> <Link href='/Termsandconditions'>Terms & conditions</Link></span></p>
       </div>
