@@ -7,6 +7,7 @@ import Footer from '../../components/Footer';
 import { FaBed, FaUtensils, FaUserShield } from 'react-icons/fa';
 import { FaPersonSnowboarding } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
+import BookingFormModal from '../../components/BookingFormModal';
 export default function TourDetails() {
   const [tourData, settourData] = useState();
   useEffect(() => {
@@ -18,7 +19,15 @@ export default function TourDetails() {
     };
     fetchTours();
   }, []);
+  const [isModalOpen, setModalOpen] = useState(false);
 
+  const handleOpenModal = () => {
+    setModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setModalOpen(false);
+  };
   return (
     <>
     <Navbar/>
@@ -47,7 +56,7 @@ export default function TourDetails() {
               <h2 className="text-2xl font-bold mb-4">Day-wise Itinerary</h2>
               {tourData?.dayWiseItinerary.map((day, index) => (
                 <div key={index} className="mb-4">
-                  <h3 className="text-xl font-semibold bg-blue-300 px-4">Day {day.dayNumber}</h3>
+                  <h3 className="text-xl font-semibold bg-blue-300 px-4 rounded-lg w-[10rem]">Day {day.dayNumber}</h3>
                   <p className="text-gray-700">{day.description}</p>
                 </div>
               ))}
@@ -95,8 +104,7 @@ export default function TourDetails() {
               <p className="line-through text-gray-700">₹{tourData?.price}</p>
               <p className='text-3xl font-bold flex items-center gap-2'>₹{tourData?.discountedPrice}<span className='text-sm'> per person</span></p>
               </div>
-             
-              <button className='w-[20rem] h-[3rem] p-2 font-bold border border-green-600 rounded-lg bg-white shadow-lg m-2 '>Submit Your query</button>
+              <button className='w-[20rem] h-[3rem] p-2 font-bold border border-green-600 rounded-lg bg-white shadow-lg m-2 ' onClick={handleOpenModal}>Submit Your query</button>
             </div>
             <div className='border border-gray-500 h-auto rounded-lg  flex flex-col gap-1  shadow-lg'>
               <div className='border-b-2 rounded-lg p-2 pb-4 '>
@@ -127,6 +135,10 @@ export default function TourDetails() {
               </div>
           </div>
         </div>
+        <BookingFormModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+      />
     <Footer/>
     </>
   )
