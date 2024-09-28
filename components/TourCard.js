@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FaBed, FaUtensils, FaUserShield } from 'react-icons/fa';
 import { FaPersonSnowboarding } from "react-icons/fa6";
+import Link from 'next/link';
 export default function TourCard() {
   const [tours, setTours] = useState([]);
   const [showAll, setShowAll] = useState(false);
@@ -72,9 +73,11 @@ export default function TourCard() {
               <p className="mt-2 font-semibold">{tour.numberOfNights} Nights</p>
 
               {/* View More Button */}
-              <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg w-full">
+              <Link href={`/tourdetails/${tour.title}`}>
+
+               <button className="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg w-full" onClick={()=>{localStorage.setItem('id',tour._id)}}>
                 View More
-              </button>
+              </button></Link>
             </div>
           </div>
         ))}
